@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            
+<a-camera>
+    <a-cursor fuse="true" fuse-timeout="2000"></a-cursor>
+</a-camera>
+            
+        <a-box
+            position="0 1 -5"
+            depth="2"
+            height="0.5"
+            width="3"
+            animation="
+                property: position;
+                from: -7 1 -6;
+                to: 7 1 -6;
+                dur: 1000;
+                easing: linear;
+                loop: true;
+                startEvents: click;
+                dir: alternate;
+            "
+            animation__2="
+                property: scale;
+                from: 2 2 2;
+                to: 1 1 1;
+                dur: 3000;
+                easing: linear;
+                startEvents: click;
+            "
+            color="tomato">
+        </a-box>
+        <a-sphere position="0 2 -8" radius="1" color="red"
+         animation="
+                property: position;
+                from: 0 2 -6;
+                to: 0 5 -6;
+                dur: 2000;
+                easing: linear;
+                loop: true;
+                startEvents: click;
+                dir: alternate;
+            "
+             animation__2="
+                property: scale;
+                from: 1 1 1;
+                to: 0.5 0.5 0.5;
+                dur: 1750;
+                easing: linear;
+                startEvents: click;
+            "
+        ></a-sphere>
+        </a-scene>
+    </body>
+</html>
